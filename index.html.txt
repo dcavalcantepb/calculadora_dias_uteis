@@ -1,0 +1,39 @@
+<Head> <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+
+<h2>Calculadora de Dias Úteis</h2>
+
+<label>Data início:</label>
+<input type="date" id="dataInicio">
+
+<label>Data fim:</label>
+<input type="date" id="dataFim">
+
+<label class="opcao">
+
+<input type="checkbox" id="contarInicio">
+
+<span>Contar data inicial</span>
+
+</label>
+  
+<div class="botoes">
+
+<button class="btn-calcular" onclick="calcularDiasUteis()">
+Calcular
+</button>
+
+<button class="btn-limpar" onclick="limparCampos()">
+Limpar
+</button>
+
+</div>
+
+<p id="resultado"></p>
+
+</div>
+<script src="script.js"></script>
+</body>
