@@ -46,9 +46,22 @@ while(dataAtual <= fim){
 const diaSemana =
 dataAtual.getDay();
 
+const dataAtual = new Date(inicio);
+
+dataAtual.setDate(
+inicio.getDate() + i
+);
+
+
 if(
-diaSemana !== 0 &&
-diaSemana !== 6
+
+diaSemana !== 0 && // domingo
+diaSemana !== 6 && // sábado
+
+!ehFeriado(dataAtual) &&
+
+!ehPontoFacultativo(dataAtual)
+
 ){
 
 diasUteis++;
@@ -81,3 +94,4 @@ document.getElementById("dataFim").value = "";
 document.getElementById("resultado").innerText = "";
 
 }
+
