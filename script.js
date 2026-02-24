@@ -63,21 +63,21 @@ let diasUteis = 0;
 
 function ehFeriado(data){
 
-const yyyy =
-data.getFullYear();
+const dd =
+String(
+data.getDate()
+).padStart(2,"0");
 
 const mm =
 String(
 data.getMonth()+1
 ).padStart(2,"0");
 
-const dd =
-String(
-data.getDate()
-).padStart(2,"0");
+const yyyy =
+data.getFullYear();
 
 const formato =
-`${yyyy}-${mm}-${dd}`;
+`${dd}-${mm}-${yyyy}`;
 
 return FERIADOS.includes(formato);
 
@@ -131,4 +131,5 @@ document.getElementById("dataFim").value="";
 document.getElementById("resultado").innerText="";
 
 }
+
 
